@@ -5,20 +5,20 @@ const createEvent = (event) => {
 };
 
 const getAllEvents = () => {
-  return axiosInstance.get("/event");
+  return axiosInstance.get("/get-all-events");
 };
 
 const getEventById = (id) => {
-  return axiosInstance.get(`/event/${id}`); 
+  return axiosInstance.get(`/edit-event/${id}`); 
 };
 
 
 const updateEvent = (id, event) => {
-  return axiosInstance.patch(`/event/${id}`, event);
+  return axiosInstance.patch(`/update-event/${id}`, event);
 };
 
 const deleteEvent = (id) => {
-  return axiosInstance.delete(`/event/${id}`);
+  return axiosInstance.delete(`/delete-event/${id}`);
 };
 
 export default {
