@@ -1,7 +1,7 @@
 import axiosInstance from "../api/api";
 
 const createEvent = (event) => {
-  axiosInstance.post("/add-events", event);
+  axiosInstance.post("/add-event", event);
 };
 
 const getAllEvents = () => {
