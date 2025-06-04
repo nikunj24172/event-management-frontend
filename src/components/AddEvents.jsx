@@ -24,10 +24,10 @@ const EventForm = () => {
       try {
         await EventServices.createEvent(values);
         resetForm();
+        toast.success("Event Created Successfully");
         setTimeout(() => {
           navigate("/");
         }, 1000);
-        toast.success("Event Created Successfully");
       } catch (error) {
         toast.error("Error in Creating Event !!", error);
       }
@@ -115,7 +115,7 @@ const EventForm = () => {
                 placeholder="Enter location"
                 className="w-full px-4 py-2 rounded-md border border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm"
               />
-                {errors.location && touched.location ? (
+              {errors.location && touched.location ? (
                 <p className="text-red-600">{errors.location}</p>
               ) : null}
             </div>
@@ -135,9 +135,9 @@ const EventForm = () => {
               placeholder="Write event details..."
               className="w-full px-4 py-2 rounded-md border border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm"
             />
-              {errors.description && touched.description ? (
-                <p className="text-red-600">{errors.description}</p>
-              ) : null}
+            {errors.description && touched.description ? (
+              <p className="text-red-600">{errors.description}</p>
+            ) : null}
           </div>
 
           {/* Buttons */}

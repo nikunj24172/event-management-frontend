@@ -1,7 +1,7 @@
 import axiosInstance from "../api/api";
 
 const createEvent = (event) => {
-  axiosInstance.post("/event", event);
+  axiosInstance.post("/add-events", event);
 };
 
 const getAllEvents = () => {
@@ -9,9 +9,8 @@ const getAllEvents = () => {
 };
 
 const getEventById = (id) => {
-  return axiosInstance.get(`/edit-event/${id}`); 
+  return axiosInstance.get(`/edit-event/${id}`);
 };
-
 
 const updateEvent = (id, event) => {
   return axiosInstance.patch(`/update-event/${id}`, event);
