@@ -25,9 +25,7 @@ const EventForm = () => {
         await EventServices.createEvent(values);
         resetForm();
         toast.success("Event Created Successfully");
-        setTimeout(() => {
-          navigate("/");
-        }, 1000);
+        navigate("/");
       } catch (error) {
         toast.error("Error in Creating Event !!", error);
       }
