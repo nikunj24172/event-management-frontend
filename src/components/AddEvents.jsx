@@ -5,7 +5,7 @@ import EventServices from "../services/EventServices";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-import { Link } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const EventForm = () => {
   const initialValue = {
