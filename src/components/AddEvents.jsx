@@ -5,6 +5,7 @@ import EventServices from "../services/EventServices";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
+import { Link } from "lucide-react";
 
 const EventForm = () => {
   const initialValue = {
@@ -140,12 +141,15 @@ const EventForm = () => {
 
           {/* Buttons */}
           <div className="flex justify-center gap-3 pt-4">
+          <Link to="/">
             <button
               type="button"
               className="px-4 py-2 bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition"
             >
               Cancel
             </button>
+          </Link>
+            
             <button
               type="submit"
               className="px-6 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
